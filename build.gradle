@@ -13,6 +13,17 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+    plugins {
+  id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "wildest-dream_authClient"
+    property "sonar.organization", "wildest-dream"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
 }
 
 allprojects {
